@@ -29,7 +29,7 @@
       UI.clearError();
 
       var name = UI.el.studentName.value.trim();
-      var id = UI.el.studentId.value.trim();
+      var studentClass = UI.el.studentClass.value.trim();
       var valid = true;
 
       if (!Validation.isNonEmptyName(name)) {
@@ -39,16 +39,16 @@
         UI.setFieldError(UI.el.studentNameError, null);
       }
 
-      if (!Validation.isValidIsraeliId(id)) {
-        UI.setFieldError(UI.el.studentIdError, 'מספר תעודת הזהות אינו תקין.');
+      if (!Validation.isNonEmptyClass(studentClass)) {
+        UI.setFieldError(UI.el.studentClassError, 'נא להזין כיתה.');
         valid = false;
       } else {
-        UI.setFieldError(UI.el.studentIdError, null);
+        UI.setFieldError(UI.el.studentClassError, null);
       }
 
       if (!valid) return;
 
-      student = { name: name, id: id };
+      student = { name: name, studentClass: studentClass };
       loadTopics();
     });
   }
@@ -148,7 +148,7 @@
     try {
       await Api.submitResult({
         student_name: state.student.name,
-        student_id: state.student.id,
+        student_class: state.student.studentClass,
         topic_id: state.topic.topic_id,
         topic_name: state.topic.topic_name,
         total_questions: result.total_questions,
