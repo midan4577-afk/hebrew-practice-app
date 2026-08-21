@@ -26,16 +26,16 @@
       <!-- Screen 1: student details -->
       <section id="screen-student" class="screen" hidden>
         <h2>לפני שמתחילים</h2>
-        <p class="hint">כדי לשמור את התוצאה, נא למלא שם מלא ומספר תעודת זהות.</p>
+        <p class="hint">כדי לשמור את התוצאה, נא למלא שם מלא וכיתה.</p>
 
         <form id="student-form" novalidate>
           <label for="student-name">שם מלא</label>
           <input id="student-name" name="student-name" type="text" autocomplete="name" required />
           <p class="field-error" id="student-name-error" hidden></p>
 
-          <label for="student-id">תעודת זהות</label>
-          <input id="student-id" name="student-id" type="text" inputmode="numeric" autocomplete="off" required />
-          <p class="field-error" id="student-id-error" hidden></p>
+          <label for="student-class">כיתה</label>
+          <input id="student-class" name="student-class" type="text" autocomplete="off" required />
+          <p class="field-error" id="student-class-error" hidden></p>
 
           <button type="submit" class="btn btn-primary">המשך</button>
         </form>
