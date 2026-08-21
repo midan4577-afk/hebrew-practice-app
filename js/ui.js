@@ -18,9 +18,9 @@ var UI = (function () {
 
     studentForm: document.getElementById('student-form'),
     studentName: document.getElementById('student-name'),
-    studentId: document.getElementById('student-id'),
+    studentClass: document.getElementById('student-class'),
     studentNameError: document.getElementById('student-name-error'),
-    studentIdError: document.getElementById('student-id-error'),
+    studentClassError: document.getElementById('student-class-error'),
 
     topicStudentHint: document.getElementById('topic-student-hint'),
     topicList: document.getElementById('topic-list'),
